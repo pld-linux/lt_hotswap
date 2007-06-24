@@ -3,8 +3,8 @@
 %define		_rel	0.1
 %define		_mod_suffix	current
 #
-Summary:	ACPI kernel driver to support hot-swapping ultrabay type peripherals on laptops.
-Summary(pl.UTF-8):	Driver ACPI wspomagający wymianę urządzeń UltraBay w laptopach.
+Summary:	ACPI kernel driver to support hot-swapping ultrabay type peripherals on laptops
+Summary(pl.UTF-8):	Sterownik ACPI wspomagający wymianę urządzeń UltraBay w laptopach
 Name:		lt_hotswap
 Version:	0.3.6
 Release:	%{_rel}
@@ -18,16 +18,16 @@ BuildRequires:	rpmbuild(macros) >= 1.379
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The lt_hotswap kernel module enables hot-swapping of UltraBay disk 
-drives (PATA) under Linux, with DMA support. 
+The lt_hotswap kernel module enables hot-swapping of UltraBay disk
+drives (PATA) under Linux, with DMA support.
 
 %description -l pl.UTF-8
-Moduł jądra właczający  możliwość podłączania i odłączanie dysków w
+Moduł jądra włączający możliwość podłączania i odłączanie dysków w
 UltraBay (PATA) w trakcie pracy.
 
 %package -n kernel%{_alt_kernel}-misc-%{name}
-Summary:	Linux kernel module for
-Summary(pl.UTF-8):	Moduł jądra dla
+Summary:	Linux kernel module for hot-swapping ultrabay type peripherals
+Summary(pl.UTF-8):	Moduł jądra do podłączania i odłączania urządzeń ultrabay w trakcie pracy
 Release:		%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 %{?with_dist_kernel:%requires_releq_kernel}
@@ -40,7 +40,7 @@ This is a semi-'driver' to support hotswapping on standard PATA
 (CD/DVD,HDD) in laptops Fujitsu and IBM.
 
 %description -n kernel%{_alt_kernel}-misc-%{name} -l pl.UTF-8
-lt_hotswap umożliwi podłączanie i odłączanie urządzeń PATA
+lt_hotswap umożliwia podłączanie i odłączanie urządzeń PATA
 (CD/DVD,HDD) w trakcie pracy w laptopach Fujitsu i IBM.
 
 %prep
